@@ -24,11 +24,6 @@ function Article(){
       .then(data => {
         setPost(data);
         setLoading(false);
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = data.title.rendered;
-        const newTitle = tempDiv.innerText;
-
-        document.title = `${newTitle} | Kora Časopis`;
       })
       .catch(err => {
         console.error(err);
@@ -81,12 +76,16 @@ function Article(){
         </div>
   );
 
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = post.title.rendered;
+  const cleanTitle = tempDiv.innerText;
+
   return (
     <div className="article-container">
       <Helmet>
 
-        <title>{newTitle} | Kora Časopis</title>
-        <meta name="description" content={`Pročitajte članak "${newTitle}" na portalu Kora.`} />
+        <title>{cleanTitle} | Kora Časopis</title>
+        <meta name="description" content={`Pročitajte članak "${cleanTitle}" na portalu Kora.`} />
         <link rel="canonical" href={`https://koracasopis.com/article/${id}`} />
 
     </Helmet>
