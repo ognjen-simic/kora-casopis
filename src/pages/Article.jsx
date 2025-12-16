@@ -85,8 +85,8 @@ function Article(){
     <div className="article-container">
       <Helmet>
 
-        <title>{cleanTitle} | Kora Časopis</title>
-        <meta name="description" content={`Pročitajte članak "${cleanTitle}" na portalu Kora.`} />
+        <title>{newTitle} | Kora Časopis</title>
+        <meta name="description" content={`Pročitajte članak "${newTitle}" na portalu Kora.`} />
         <link rel="canonical" href={`https://koracasopis.com/article/${id}`} />
 
     </Helmet>
