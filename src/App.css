@@ -12,6 +12,7 @@
   linear-gradient(to right, black, transparent 10%, transparent 90%, black),
   linear-gradient(to top, black, transparent 10%),
   url(assets/tree-background.jpg);
+  filter: brightness(0.8);
   background-size: cover;
   z-index: -5;
 }
@@ -35,6 +36,7 @@ header{
 }
 .card {
   border-radius: 8px;
+  border: 5px solid hsl(0, 0%, 6%);
   display: flex;
   flex-direction: column;
   background-color: hsl(240, 8%, 9%);
