@@ -45,6 +45,12 @@ function Home()
     </div>;
 
   return (
+    <>
+    <Helmet>
+      <title>Kora Časopis - Početna</title>
+      <meta name="description" content="" />
+      <link rel="canonical" href="https://koracasopis.com/" />
+    </Helmet>
     <div className="feed">
       {posts.map(post => {
         const imageUrl = getImageUrl(post);
@@ -69,6 +75,7 @@ function Home()
         );
       })}
     </div>
+    </>
   );
 };
 

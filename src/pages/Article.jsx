@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import '/src/Article.css';
 import LikeButton from '../LikeButton';
 import { FaShareNodes } from 'react-icons/fa6';
+import { Helmet } from 'react-helmet-async';
 
 function Article(){
   const { id } = useParams();
@@ -82,15 +83,19 @@ function Article(){
 
   return (
     <div className="article-container">
+      <Helmet>
+
+        <title>{cleanTitle} | Kora Časopis</title>
+        <meta name="description" content={`Pročitajte članak "${cleanTitle}" na portalu Kora.`} />
+        <link rel="canonical" href={`https://koracasopis.com/article/${id}`} />
+
+    </Helmet>
+
       <div className="articles">
         <Link to="/" className="back-btn">← Nazad na početnu</Link>
-
-        <h1 className="title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-      
+        <h1 className="title" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />      
         <p className="date">{new Date(post.date).toLocaleDateString()}</p>
-
         <div className="content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-
         <div className="stats-bar">
 
           <LikeButton postId={post.id} />
