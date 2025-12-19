@@ -4,6 +4,8 @@ A modern, full-stack web portal for "Kora," a literary and culture magazine. Thi
 
 **Live Site:** [https://koracasopis.com](https://koracasopis.com)
 
+<img width="511" height="692" alt="Screenshot_1" src="https://github.com/user-attachments/assets/ee4c8af1-e974-433b-932b-0881c2f89af0" />
+
 ## Key Features
 
 - **Headless Architecture:** Fetches content dynamically from a WordPress backend via REST API.
